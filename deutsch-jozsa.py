@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import sqc
+from sqc.operations import H, X
 
 Nbits=2
 
@@ -11,13 +12,6 @@ def Uf_const(o): # N=1, f(x)=1
 def Uf_balanced(o): # N=1, f(x)=x
     return o.CNOT(0,1)
 
-@sqc.operation
-def H(b, o):
-    return o.H(b)
-
-@sqc.operation
-def X(b, o):
-    return o.X(b)
 
 for Uf,n in [ (Uf_const,"f(x)=1"), (Uf_balanced,"f(x)=x") ]:
     print("Run Deutsch-Jozsa for %s" % n)
