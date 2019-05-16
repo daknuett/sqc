@@ -4,6 +4,7 @@
 import numpy as np
 from sqc.state import state
 from sqc.operator import operator
+from sqc.operator_factory import operation
 
 def seed(s):
     np.random.seed(s)
