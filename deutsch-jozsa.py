@@ -23,7 +23,7 @@ for Uf,n in [ (Uf_const,"f(x)=1"), (Uf_balanced,"f(x)=x") ]:
     print(psi0)
 
     # Psi1
-    psi1 = (H(0) | H(1)) * psi0
+    psi1 = H(0) @ H(1) * psi0
     print("|Psi1> = ")
     print(psi1)
 
