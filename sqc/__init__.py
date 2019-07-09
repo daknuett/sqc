@@ -5,7 +5,6 @@ import numpy as np
 from sqc.state import state
 from sqc.operator import operator
 from sqc.operator_factory import operation
-import sqc.noise
 
 def seed(s):
     np.random.seed(s)
