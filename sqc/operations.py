@@ -1,11 +1,12 @@
 from .operator_factory import operation
+import numpy as np
 
 @operation
 def H(i, o):
     return o.H(i)
 @operation
 def Z(i, o):
-    return o.Z(i)
+    return o.Rz(i, np.pi)
 @operation
 def Y(i, o):
     return o.Y(i)
@@ -38,17 +39,17 @@ def u1(i, lam, o):
 
 @operation
 def S(i, o):
-    return o.S(i)
+    return o.S(i, np.pi / 2)
 
 @operation
 def Sdg(i, o):
-    return o.Sdg(i)
+    return o.Sdg(i, np.pi / -2)
 @operation
 def T(i, o):
-    return o.T(i)
+    return o.Rz(i, np.pi / 4)
 @operation
 def Tdg(i, o):
-    return o.Tdg(i)
+    return o.Rz(i, np.pi / -4)
 
 @operation
 def Rx(i, theta, o):
